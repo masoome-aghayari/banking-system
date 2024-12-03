@@ -48,9 +48,9 @@ public class ExceptionHandlerController {
         String localizedMessage = messageSource.getMessage("error.validation",
                                                            errors.values().toArray(), LocaleConfig.LOCALE);
         String message = errors.entrySet()
-                            .stream()
-                            .map(entry -> entry.getKey() + " = " + entry.getValue())
-                            .collect(Collectors.joining(", ", "{", "}"));
+                               .stream()
+                               .map(entry -> entry.getKey() + " = " + entry.getValue())
+                               .collect(Collectors.joining(", ", "{", "}"));
         return getErrorResponseWithData(message,
                                         localizedMessage,
                                         HttpStatus.BAD_REQUEST,
@@ -102,7 +102,6 @@ public class ExceptionHandlerController {
     public ResponseEntity<ErrorResponse<Object>> handleHandlerMethodValidationException(HandlerMethodValidationException ex,
                                                                                         WebRequest request) {
         String localizedMessage = ex.getLocalizedMessage();
-        var parameterValidationResults = ex.getParameterValidationResults();
         return getErrorResponse(ex.getMessage(), localizedMessage, request.getContextPath(), HttpStatus.BAD_REQUEST);
     }
 
