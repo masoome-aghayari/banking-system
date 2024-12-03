@@ -14,6 +14,7 @@ import ir.azkivaam.banking_system.mapper.BankAccountMapper;
 import ir.azkivaam.banking_system.observer.impl.BankAccountObserverManager;
 import ir.azkivaam.banking_system.repository.BankAccountRepository;
 import ir.azkivaam.banking_system.repository.BranchRepository;
+import ir.azkivaam.banking_system.repository.PersonRepository;
 import ir.azkivaam.banking_system.service.impl.AccountServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -43,6 +44,9 @@ class AccountServiceImplTest {
     private BranchRepository branchRepository;
 
     @Mock
+    private PersonRepository personRepository;
+
+    @Mock
     private BankAccountRepository accountRepository;
 
     @Mock
@@ -55,7 +59,8 @@ class AccountServiceImplTest {
     void setUp() {
         MockitoAnnotations.openMocks(this);
         ExecutorService notificationExecutor = Executors.newFixedThreadPool(2);
-        accountService = new AccountServiceImpl(branchRepository,
+        accountService = new AccountServiceImpl(personRepository,
+                                                branchRepository,
                                                 bankAccountObserverManager,
                                                 bankAccountMapper,
                                                 notificationExecutor,
