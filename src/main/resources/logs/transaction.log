@@ -1,0 +1,99 @@
+2024-12-03 21:30:59 INFO  - Transaction with tracking code: 7512026 was successfully initialized
+2024-12-03 21:31:00 INFO  - Transaction with tracking code: 7512026 was successfully done
+2024-12-03 21:31:41 INFO  - Transaction with tracking code: 6107308 was successfully initialized
+2024-12-03 21:48:29 INFO  - Transaction with tracking code: 6107308 was failed due to null
+2024-12-03 22:29:59 INFO  - Transaction with tracking code: 2927016 was successfully initialized
+2024-12-03 22:29:59 INFO  - Transaction with tracking code: 2927016 was failed due to null
+2024-12-03 22:39:11 INFO  - Transaction with tracking code: 4309198 was successfully initialized
+2024-12-03 22:39:11 INFO  - Transaction with tracking code: 4309198 was failed due to null
+2024-12-03 22:41:48 INFO  - Transaction with tracking code: 2809988 was successfully initialized
+2024-12-03 22:43:11 INFO  - Transaction with tracking code: 2809988 was failed due to null
+2024-12-03 22:44:25 INFO  - Transaction with tracking code: 5609049 was successfully initialized
+2024-12-03 22:46:14 INFO  - Transaction with tracking code: 5609049 was failed due to null
+2024-12-03 22:47:48 INFO  - Transaction with tracking code: 7252063 was successfully initialized
+2024-12-03 22:49:32 INFO  - Transaction with tracking code: 7252063 was failed due to null
+2024-12-03 22:49:35 INFO  - Transaction with tracking code: 6695057 was successfully initialized
+2024-12-03 22:51:44 INFO  - Transaction with tracking code: 6695057 was failed due to null
+2024-12-03 23:02:03 INFO  - Transaction with tracking code: 9682257 was successfully initialized
+2024-12-03 23:03:04 INFO  - Transaction with tracking code: 9239410 was successfully initialized
+2024-12-03 23:04:00 INFO  - Transaction with tracking code: 2753087 was successfully initialized
+2024-12-03 23:06:09 INFO  - Transaction with tracking code: 4446009 was successfully initialized
+2024-12-03 23:06:28 INFO  - Transaction with tracking code: 4446009 was failed due to Bank account with account number 1280054285 not found
+2024-12-03 23:08:04 INFO  - Transaction with tracking code: 7446534 was successfully initialized
+2024-12-03 23:08:19 INFO  - Transaction with tracking code: 7446534 was failed due to Balance of account with accountNumber 8696016778 is not sufficient to withdraw
+2024-12-03 23:09:58 INFO  - Transaction with tracking code: 3543724 was successfully initialized
+2024-12-03 23:09:59 INFO  - Transaction with tracking code: 3543724 was successfully done
+2024-12-03 23:17:31 INFO  - Transaction with tracking code: 5859904 was successfully initialized
+2024-12-03 23:17:31 INFO  - Transaction with tracking code: 5859904 was successfully done
+2024-12-03 23:36:02 INFO  - Transaction with tracking code: 3694706 was successfully initialized
+2024-12-03 23:36:02 INFO  - Transaction with tracking code: 3694706 was successfully done
+2024-12-03 23:41:07 INFO  - Transaction with tracking code: 4761310 was successfully initialized
+2024-12-03 23:41:07 INFO  - Transaction with tracking code: 4761310 was successfully done
+2024-12-03 23:41:14 INFO  - Transaction with tracking code: 1121051 was successfully initialized
+2024-12-03 23:41:17 INFO  - Transaction with tracking code: 1121051 was failed due to Bank account with account number 4433136192 not found
+2024-12-03 23:51:51 INFO  - Transaction with tracking code: 5252438 was successfully initialized
+2024-12-03 23:51:51 INFO  - Transaction with tracking code: 5252438 was successfully done
+2024-12-03 23:53:44 INFO  - Transaction with tracking code: 4575158 was successfully initialized
+2024-12-03 23:54:17 INFO  - Transaction with tracking code: 4575158 was successfully done
+2024-12-04 00:07:58 INFO  - Transaction with tracking code: 7947733 was successfully initialized
+2024-12-04 00:07:58 INFO  - Transaction with tracking code: 5422858 was successfully initialized
+2024-12-04 00:07:59 INFO  - Transaction with tracking code: 6958568 was successfully initialized
+2024-12-04 00:07:59 INFO  - Transaction with tracking code: 6958568 was successfully done
+2024-12-04 00:07:59 INFO  - Transaction with tracking code: 7947733 was successfully done
+2024-12-04 00:07:59 INFO  - Transaction with tracking code: 5422858 was successfully done
+2024-12-04 00:11:28 INFO  - Transaction with tracking code: 1155647 was successfully initialized
+2024-12-04 00:11:28 INFO  - Transaction with tracking code: 2290036 was successfully initialized
+2024-12-04 00:11:39 INFO  - Transaction with tracking code: 2518984 was successfully initialized
+2024-12-04 00:11:43 INFO  - Transaction with tracking code: 1155647 was successfully done
+2024-12-04 00:11:43 INFO  - Transaction with tracking code: 2290036 was successfully done
+2024-12-04 00:11:43 INFO  - Transaction with tracking code: 2518984 was successfully done
+2024-12-04 00:12:11 INFO  - Transaction with tracking code: 7743367 was successfully initialized
+2024-12-04 00:12:11 INFO  - Transaction with tracking code: 4638794 was successfully initialized
+2024-12-04 00:12:11 INFO  - Transaction with tracking code: 8751362 was successfully initialized
+2024-12-04 00:12:11 INFO  - Transaction with tracking code: 8751362 was successfully done
+2024-12-04 00:12:11 INFO  - Transaction with tracking code: 4638794 was successfully done
+2024-12-04 00:12:11 INFO  - Transaction with tracking code: 7743367 was successfully done
+2024-12-04 00:13:40 INFO  - Transaction with tracking code: 8028317 was successfully initialized
+2024-12-04 00:13:40 INFO  - Transaction with tracking code: 6344579 was successfully initialized
+2024-12-04 00:13:40 INFO  - Transaction with tracking code: 9143551 was successfully initialized
+2024-12-04 00:13:40 INFO  - Transaction with tracking code: 9143551 was successfully done
+2024-12-04 00:13:40 INFO  - Transaction with tracking code: 8028317 was successfully done
+2024-12-04 00:13:40 INFO  - Transaction with tracking code: 6344579 was successfully done
+2024-12-04 00:15:19 INFO  - Transaction with tracking code: 4143777 was successfully initialized
+2024-12-04 00:15:19 INFO  - Transaction with tracking code: 7114014 was successfully initialized
+2024-12-04 00:15:19 INFO  - Transaction with tracking code: 1607412 was successfully initialized
+2024-12-04 00:15:19 INFO  - Transaction with tracking code: 1607412 was successfully done
+2024-12-04 00:15:19 INFO  - Transaction with tracking code: 7114014 was successfully done
+2024-12-04 00:15:19 INFO  - Transaction with tracking code: 4143777 was successfully done
+2024-12-04 00:16:50 INFO  - Transaction with tracking code: 1018877 was successfully initialized
+2024-12-04 00:16:50 INFO  - Transaction with tracking code: 7993676 was successfully initialized
+2024-12-04 00:17:24 INFO  - Transaction with tracking code: 2321361 was successfully initialized
+2024-12-04 00:17:24 INFO  - Transaction with tracking code: 1018877 was successfully done
+2024-12-04 00:17:24 INFO  - Transaction with tracking code: 7993676 was successfully done
+2024-12-04 00:17:24 INFO  - Transaction with tracking code: 2321361 was successfully done
+2024-12-04 00:18:32 INFO  - Transaction with tracking code: 8053879 was successfully initialized
+2024-12-04 00:18:32 INFO  - Transaction with tracking code: 3761769 was successfully initialized
+2024-12-04 00:18:32 INFO  - Transaction with tracking code: 8053879 was failed due to Transaction with tracking code: 3761769 failed due to: Bank account with account number 7811780159 not found
+2024-12-04 00:18:32 INFO  - Transaction with tracking code: 3761769 was failed due to Bank account with account number 7811780159 not found
+2024-12-04 00:25:31 INFO  - Transaction with tracking code: 9756071 was successfully initialized
+2024-12-04 00:25:31 INFO  - Transaction with tracking code: 3517585 was successfully initialized
+2024-12-04 00:25:37 INFO  - Transaction with tracking code: 3517585 was failed due to Balance of account with accountNumber 2340024886 is not sufficient to withdraw
+2024-12-04 00:25:37 INFO  - Transaction with tracking code: 9756071 was failed due to Transaction with tracking code: 3517585 failed due to: Balance of account with accountNumber 2340024886 is not sufficient to withdraw
+2024-12-04 00:26:18 INFO  - Transaction with tracking code: 3221400 was successfully initialized
+2024-12-04 00:26:18 INFO  - Transaction with tracking code: 3394608 was successfully initialized
+2024-12-04 00:26:21 INFO  - Transaction with tracking code: 8410242 was successfully initialized
+2024-12-04 00:26:21 INFO  - Transaction with tracking code: 8410242 was successfully done
+2024-12-04 00:26:21 INFO  - Transaction with tracking code: 3394608 was successfully done
+2024-12-04 00:26:21 INFO  - Transaction with tracking code: 3221400 was successfully done
+2024-12-04 00:26:47 INFO  - Transaction with tracking code: 7937707 was successfully initialized
+2024-12-04 00:26:47 INFO  - Transaction with tracking code: 7772504 was successfully initialized
+2024-12-04 00:26:48 INFO  - Transaction with tracking code: 3069936 was successfully initialized
+2024-12-04 00:26:48 INFO  - Transaction with tracking code: 3069936 was successfully done
+2024-12-04 00:26:48 INFO  - Transaction with tracking code: 7772504 was successfully done
+2024-12-04 00:26:48 INFO  - Transaction with tracking code: 7937707 was successfully done
+2024-12-04 00:27:52 INFO  - Transaction with tracking code: 9254735 was successfully initialized
+2024-12-04 00:27:52 INFO  - Transaction with tracking code: 9326257 was successfully initialized
+2024-12-04 00:27:53 INFO  - Transaction with tracking code: 6358119 was successfully initialized
+2024-12-04 00:27:53 INFO  - Transaction with tracking code: 9254735 was successfully done
+2024-12-04 00:27:53 INFO  - Transaction with tracking code: 6358119 was successfully done
+2024-12-04 00:27:53 INFO  - Transaction with tracking code: 9326257 was successfully done
