@@ -3,7 +3,6 @@ package ir.azkivaam.banking_system.domain.annotation;
 import ir.azkivaam.banking_system.validator.AmountRangeValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
 import java.lang.annotation.ElementType;

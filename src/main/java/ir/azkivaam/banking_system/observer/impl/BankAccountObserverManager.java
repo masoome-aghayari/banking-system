@@ -9,7 +9,6 @@ import ir.azkivaam.banking_system.domain.dto.BankAccountDto;
 import ir.azkivaam.banking_system.domain.dto.Event;
 import ir.azkivaam.banking_system.observer.BankAccountObserver;
 import ir.azkivaam.banking_system.observer.ObserverManager;
-import lombok.Getter;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
