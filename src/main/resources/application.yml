@@ -1,0 +1,94 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/banking-system
+
+spring:
+  application:
+    name: banking-system
+  main:
+    allow-bean-definition-overriding: true
+  h2:
+    console:
+      enabled: true
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
+          jwk-set-uri: ${spring.security.oauth2.resource-server.jwt.issuer-uri}/protocol/openid-connect/certs
+      client:
+        registration:
+          keycloak:
+            client-id: banking-system
+            client-secret: R58gTIDrfU9BkYoDuZCL3yy0hH5CjHfA
+            authorization-grant-type: authorization_code
+            scope: openid, profile, roles
+            redirect-uri: http://localhost:8080/login/oauth2/code/banking-system
+        provider:
+          keycloak:
+            issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
+  jmx:
+    enabled: false
+  datasource:
+    url: jdbc:h2:mem:banking-system
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        cache:
+          use_second_level_cache: true
+          region.factory_class: org.hibernate.cache.jcache.JCacheRegionFactory
+          use_query_cache: true
+      javax:
+        cache:
+          provider: org.ehcache.jsr107.EhcacheCachingProvider
+    database-platform: org.hibernate.dialect.H2Dialect
+  profiles:
+    active: dev
+    default: dev
+
+logging:
+  level:
+    root: debug
+    org:
+      hibernate:
+        cache: error
+      ehcache: error
+    ir.azkivaam.banking_system: debug
+
+springdoc:
+  packages-to-scan: ir.azkivaam.banking_system.controller
+  swagger-ui:
+    tagsSorter: alpha
+    filter: true
+    url: /api-docs
+    operations-sorter: method
+    path: /swagger-ui.html
+    try-it-out-enabled: true
+  api-docs:
+    path: /api-docs
+    enabled: true
+
+keycloak:
+  auth-server-url: http://localhost:8091
+  realm: banking-system
+
+application:
+  version: 1.0.0
+  encoding: UTF-8
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,caches
+  endpoint:
+    health:
+      show-details: always
