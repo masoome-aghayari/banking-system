@@ -5,7 +5,6 @@ package ir.azkivaam.banking_system.mapper;
  * @since 11/29/24
  */
 
-
 import ir.azkivaam.banking_system.domain.dto.BankAccountCreationResponse;
 import ir.azkivaam.banking_system.domain.dto.BankAccountDto;
 import ir.azkivaam.banking_system.domain.entity.BankAccount;
@@ -15,7 +14,6 @@ import org.mapstruct.Mapping;
 import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
 
 @Mapper(componentModel = "spring", uses = {BankAccount.class, BranchMapper.class, PersonMapper.class})
 public interface BankAccountMapper {
