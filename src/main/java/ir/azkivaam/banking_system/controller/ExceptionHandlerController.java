@@ -2,6 +2,7 @@ package ir.azkivaam.banking_system.controller;
 
 import ir.azkivaam.banking_system.config.LocaleConfig;
 import ir.azkivaam.banking_system.domain.dto.ErrorResponse;
+import ir.azkivaam.banking_system.domain.enums.ErrorCode;
 import ir.azkivaam.banking_system.exceptions.*;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.TypeMismatchException;
@@ -45,7 +46,7 @@ public class ExceptionHandlerController {
         ex.getBindingResult()
           .getFieldErrors()
           .forEach(error -> errors.put(error.getField(), error.getDefaultMessage()));
-        String localizedMessage = messageSource.getMessage("error.validation",
+        String localizedMessage = messageSource.getMessage(ErrorCode.VALIDATION.getValue(),
                                                            errors.values().toArray(), LocaleConfig.LOCALE);
         String message = errors.entrySet()
                                .stream()
@@ -116,7 +117,7 @@ public class ExceptionHandlerController {
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<ErrorResponse<Object>> handleGeneralException(Exception ex, WebRequest request) {
-        String localizedMessage = messageSource.getMessage("error.general", null, LocaleConfig.LOCALE);
+        String localizedMessage = messageSource.getMessage(ErrorCode.GENERAL.getValue(), null, LocaleConfig.LOCALE);
         return getErrorResponse(ex.getMessage(),
                                 localizedMessage,
                                 request.getContextPath(),
@@ -127,7 +128,8 @@ public class ExceptionHandlerController {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<ErrorResponse<Object>> handleTypeMisMatchException(TypeMismatchException ex,
                                                                              WebRequest request) {
-        String localizedMessage = messageSource.getMessage("error.type.mismatch", null, LocaleConfig.LOCALE);
+        String localizedMessage =
+                messageSource.getMessage(ErrorCode.TYPE_MISMATCH.getValue(), null, LocaleConfig.LOCALE);
         return getErrorResponse(ex.getMessage(), localizedMessage, request.getContextPath(), HttpStatus.BAD_REQUEST);
     }
 
@@ -135,7 +137,8 @@ public class ExceptionHandlerController {
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public ResponseEntity<ErrorResponse<Object>> handleAuthenticationException(AuthenticationException ex,
                                                                                WebRequest request) {
-        String localizedMessage = messageSource.getMessage("error.unauthorized", null, LocaleConfig.LOCALE);
+        String localizedMessage =
+                messageSource.getMessage(ErrorCode.UN_AUTHORIZED.getValue(), null, LocaleConfig.LOCALE);
         return getErrorResponse(ex.getMessage(), localizedMessage, request.getContextPath(), HttpStatus.UNAUTHORIZED);
     }
 
@@ -143,7 +146,7 @@ public class ExceptionHandlerController {
     @ResponseStatus(HttpStatus.FORBIDDEN)
     public ResponseEntity<ErrorResponse<Object>> handleAccessDeniedException(AccessDeniedException ex,
                                                                              WebRequest request) {
-        String localizedMessage = messageSource.getMessage("error.forbidden", null, LocaleConfig.LOCALE);
+        String localizedMessage = messageSource.getMessage(ErrorCode.FORBIDDEN.getValue(), null, LocaleConfig.LOCALE);
         return getErrorResponse(ex.getMessage(), localizedMessage, request.getContextPath(), HttpStatus.FORBIDDEN);
     }
 
@@ -151,14 +154,15 @@ public class ExceptionHandlerController {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<ErrorResponse<Object>> resourceNotFoundExceptionHandler(NoResourceFoundException ex,
                                                                                   WebRequest request) {
-        String localizedMessage = messageSource.getMessage("error.resource.not.found", null, LocaleConfig.LOCALE);
+        String localizedMessage = messageSource.getMessage(ErrorCode.NOT_FOUND.getValue(), null, LocaleConfig.LOCALE);
         return getErrorResponse(ex.getMessage(), localizedMessage, request.getContextPath(), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler({MethodNotAllowedException.class, HttpRequestMethodNotSupportedException.class})
     @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
     public ResponseEntity<ErrorResponse<Object>> methodNotAllowedExceptionHandler(Exception ex, WebRequest request) {
-        String localizedMessage = messageSource.getMessage("error.method.not.allowed", null, LocaleConfig.LOCALE);
+        String localizedMessage =
+                messageSource.getMessage(ErrorCode.METHOD_NOT_ALLOWED.getValue(), null, LocaleConfig.LOCALE);
         return getErrorResponse(ex.getMessage(),
                                 localizedMessage,
                                 request.getContextPath(),
@@ -169,7 +173,8 @@ public class ExceptionHandlerController {
     @ResponseStatus(HttpStatus.UNSUPPORTED_MEDIA_TYPE)
     public ResponseEntity<ErrorResponse<MediaType>> handleHttpMediaTypeNotSupported(HttpMediaTypeNotSupportedException ex,
                                                                                     WebRequest request) {
-        String localizedMessage = messageSource.getMessage("error.not.supported.media.type", null, LocaleConfig.LOCALE);
+        String localizedMessage =
+                messageSource.getMessage(ErrorCode.MEDIA_NOT_SUPPORTED.getValue(), null, LocaleConfig.LOCALE);
         return getErrorResponseWithData(ex.getMessage(),
                                         localizedMessage,
                                         HttpStatus.UNSUPPORTED_MEDIA_TYPE,

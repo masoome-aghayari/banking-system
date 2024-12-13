@@ -14,8 +14,16 @@ public enum ErrorCode {
     ACCOUNT_NOT_FOUND("error.account.not.found"),
     BRANCH_NOT_FOUND("error.branch.not.found"),
     INSUFFICIENT_BALANCE("error.insufficient.balance"),
-    TRANSACTION_FAILED("error.transaction.failed");
-
+    TRANSACTION_FAILED("error.transaction.failed"),
+    VALIDATION("error.validation"),
+    GENERAL("error.general"),
+    TYPE_MISMATCH("error.type.mismatch"),
+    UN_AUTHORIZED("error.unauthorized"),
+    FORBIDDEN("error.forbidden"),
+    NOT_FOUND("error.resource.not.found"),
+    METHOD_NOT_ALLOWED("error.method.not.allowed"),
+    MEDIA_NOT_SUPPORTED("error.not.supported.media.type"),
+    WRONG_MEDIA_TYPE("error.wrong.media.type");
     private final String value;
 
     ErrorCode(String value) {
