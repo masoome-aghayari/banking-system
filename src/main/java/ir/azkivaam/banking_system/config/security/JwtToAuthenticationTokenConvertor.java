@@ -1,5 +1,10 @@
 package ir.azkivaam.banking_system.config.security;
 
+/*
+ * @author masoome.aghayari
+ * @since 12/29/23
+ */
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.convert.converter.Converter;
@@ -15,11 +20,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.*;
 import java.util.stream.Collectors;
-
-/**
- * @author masoome.aghayari
- * @since 12/29/23
- */
 
 @Component
 public class JwtToAuthenticationTokenConvertor implements Converter<Jwt, AbstractAuthenticationToken> {

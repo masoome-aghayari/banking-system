@@ -1,5 +1,10 @@
 package ir.azkivaam.banking_system.observer.impl;
 
+/*
+ * @author masoome.aghayari
+ * @since 12/1/24
+ */
+
 import ir.azkivaam.banking_system.config.LocaleConfig;
 import ir.azkivaam.banking_system.domain.dto.BankAccountDto;
 import ir.azkivaam.banking_system.domain.dto.Event;
@@ -11,11 +16,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
-
-/**
- * @author masoome.aghayari
- * @since 12/1/24
- */
 
 @Service
 @RequiredArgsConstructor

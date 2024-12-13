@@ -1,5 +1,10 @@
 package ir.azkivaam.banking_system.controller;
 
+/*
+ * @author masoome.aghayari
+ * @since 12/1/24
+ */
+
 import ir.azkivaam.banking_system.config.LocaleConfig;
 import ir.azkivaam.banking_system.domain.dto.ErrorResponse;
 import ir.azkivaam.banking_system.domain.enums.ErrorCode;
@@ -28,11 +33,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
-
-/**
- * @author masoome.aghayari
- * @since 12/1/24
- */
 
 @RestControllerAdvice
 @RequiredArgsConstructor

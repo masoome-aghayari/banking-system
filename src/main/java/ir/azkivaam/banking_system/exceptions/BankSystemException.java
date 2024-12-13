@@ -1,5 +1,10 @@
 package ir.azkivaam.banking_system.exceptions;
 
+/*
+ * @author masoome.aghayari
+ * @since 12/1/24
+ */
+
 import ir.azkivaam.banking_system.domain.enums.ErrorCode;
 import lombok.Getter;
 import org.springframework.context.i18n.LocaleContextHolder;

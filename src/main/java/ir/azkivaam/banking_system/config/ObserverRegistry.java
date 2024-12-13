@@ -1,5 +1,10 @@
 package ir.azkivaam.banking_system.config;
 
+/*
+ * @author masoome.aghayari
+ * @since 12/1/24
+ */
+
 import ir.azkivaam.banking_system.observer.BankAccountObserver;
 import ir.azkivaam.banking_system.observer.TransactionObserver;
 import ir.azkivaam.banking_system.observer.impl.BankAccountObserverManager;

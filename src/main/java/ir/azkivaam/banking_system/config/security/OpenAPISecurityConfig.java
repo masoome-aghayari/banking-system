@@ -1,5 +1,10 @@
 package ir.azkivaam.banking_system.config.security;
 
+/*
+ * @author masoome.aghayari
+ * @since 12/29/23
+ */
+
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -8,11 +13,6 @@ import io.swagger.v3.oas.models.security.SecurityScheme;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-/**
- * @author masoome.aghayari
- * @since 12/29/23
- */
 
 @Configuration
 public class OpenAPISecurityConfig {

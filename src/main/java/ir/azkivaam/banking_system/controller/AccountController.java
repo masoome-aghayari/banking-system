@@ -1,5 +1,10 @@
 package ir.azkivaam.banking_system.controller;
 
+/*
+ * @author masoome.aghayari
+ * @since 12/1/24
+ */
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
@@ -12,11 +17,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-/**
- * @author masoome.aghayari
- * @since 12/1/24
- */
 
 @RestController
 @PreAuthorize("hasRole('USER')")
