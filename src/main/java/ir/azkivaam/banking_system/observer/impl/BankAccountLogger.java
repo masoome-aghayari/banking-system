@@ -3,6 +3,8 @@ package ir.azkivaam.banking_system.observer.impl;
 import ir.azkivaam.banking_system.config.LocaleConfig;
 import ir.azkivaam.banking_system.domain.dto.BankAccountDto;
 import ir.azkivaam.banking_system.domain.dto.Event;
+import ir.azkivaam.banking_system.domain.enums.ErrorCode;
+import ir.azkivaam.banking_system.domain.enums.MessageCode;
 import ir.azkivaam.banking_system.observer.BankAccountObserver;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -35,12 +37,12 @@ public class BankAccountLogger implements BankAccountObserver {
 
     private void onAccountCreationSuccess(BankAccountDto account) {
         String accountInfo = account.getAccountInfo();
-        logger.info(getLogMessage("account.creation.success", accountInfo));
+        logger.info(getLogMessage(MessageCode.ACCOUNT_CREATION.getValue(), accountInfo));
     }
 
     private void onAccountCreationFailure(Event<BankAccountDto> event) {
         String reason = getLogMessage(event.getMessage(), event.getArguments());
-        logger.error(getLogMessage("error.account.creation.failed", reason));
+        logger.error(getLogMessage(ErrorCode.ACCOUNT_CREATION_FAILED.getValue(), reason));
     }
 
     private String getLogMessage(String code, String... params) {
