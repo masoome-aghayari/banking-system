@@ -33,7 +33,10 @@ public class TransactionController {
             description = "Deposits money to a specified bank account.",
             responses = {
                     @ApiResponse(responseCode = "200", description = "Deposited money successfully"),
-                    @ApiResponse(responseCode = "404", description = "Account not found")
+                    @ApiResponse(responseCode = "401", description = "Unauthorized"),
+                    @ApiResponse(responseCode = "403", description = "Forbidden"),
+                    @ApiResponse(responseCode = "404", description = "Account not found"),
+                    @ApiResponse(responseCode = "500", description = "Server Error"),
             },
             security = @SecurityRequirement(name = "bearerAuth")
     )
@@ -47,7 +50,10 @@ public class TransactionController {
             description = "Withdraws money from a specified bank account.",
             responses = {
                     @ApiResponse(responseCode = "200", description = "Withdrew money successfully"),
-                    @ApiResponse(responseCode = "404", description = "Account not found")
+                    @ApiResponse(responseCode = "401", description = "Unauthorized"),
+                    @ApiResponse(responseCode = "403", description = "Forbidden"),
+                    @ApiResponse(responseCode = "404", description = "Account not found"),
+                    @ApiResponse(responseCode = "500", description = "Server Error")
             },
             security = @SecurityRequirement(name = "bearerAuth"))
     @PostMapping("/withdraw")
@@ -59,7 +65,10 @@ public class TransactionController {
             description = "Transfers funds from one account to another.",
             responses = {
                     @ApiResponse(responseCode = "200", description = "Transferred money successfully"),
-                    @ApiResponse(responseCode = "404", description = "Account not found")
+                    @ApiResponse(responseCode = "401", description = "Unauthorized"),
+                    @ApiResponse(responseCode = "403", description = "Forbidden"),
+                    @ApiResponse(responseCode = "404", description = "Account not found"),
+                    @ApiResponse(responseCode = "500", description = "Server Error")
             },
             security = @SecurityRequirement(name = "bearerAuth"))
     @PostMapping("/transfer")
