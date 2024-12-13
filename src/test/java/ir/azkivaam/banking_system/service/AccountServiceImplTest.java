@@ -103,6 +103,25 @@ class AccountServiceImplTest {
         verify(bankAccountObserverManager, times(1)).notifyObservers(any());
     }
 
+    @Test
+    void getBalance_shouldReturnBalance_whenAccountExists() {
+        String accountNumber = "1234567890";
+        BankAccount entity = new BankAccount();
+        entity.setBalance(10_000_000L);
+
+        when(accountRepository.findByAccountNumberForUpdate(accountNumber)).thenReturn(Optional.of(entity));
+
+        Long balance = accountService.getBalance(accountNumber);
+        assertEquals(10_000_000L, balance);
+    }
+
+    @Test
+    void getBalance_shouldThrowException_whenAccountDoesNotExist() {
+        String accountNumber = "123456789";
+        when(accountRepository.findByAccountNumberForUpdate(accountNumber)).thenReturn(Optional.empty());
+        assertThrows(BankAccountException.class, () -> accountService.getBalance(accountNumber));
+    }
+
     static Stream<Arguments> provideTestCasesForCreateAccount() {
         String branchCode = "11111";
         Long balance = 10_000_000L;
@@ -140,25 +159,5 @@ class AccountServiceImplTest {
         bankAccount.setPerson(person);
         bankAccount.setBalance(balance);
         return Stream.of(Arguments.of(bankAccount, bankAccountDto));
-    }
-
-    @Test
-    void getBalance_shouldReturnBalance_whenAccountExists() {
-        String accountNumber = "1234567890";
-        BankAccount entity = new BankAccount();
-        entity.setBalance(10_000_000L);
-
-        when(accountRepository.findByAccountNumberForUpdate(accountNumber)).thenReturn(Optional.of(entity));
-
-        Long balance = accountService.getBalance(accountNumber);
-
-        assertEquals(10_000_000L, balance);
-    }
-
-    @Test
-    void getBalance_shouldThrowException_whenAccountDoesNotExist() {
-        String accountNumber = "123456789";
-        when(accountRepository.findByAccountNumberForUpdate(accountNumber)).thenReturn(Optional.empty());
-        assertThrows(BankAccountException.class, () -> accountService.getBalance(accountNumber));
     }
 }
